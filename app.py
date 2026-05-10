@@ -1,7 +1,8 @@
 import streamlit as st
 import pandas as pd
-from db_functions import (connect_db, get_basic_info, get_additonal_tables, add_products, get_categories, get_suppliers, get_all_products, get_product_history, place_reorder, get_pending_reorders, mark_reorder_as_received, get_last_3_months_sales)
+from db_functions import (connect_db, get_basic_info, get_additonal_tables, add_products, get_categories, get_suppliers, get_all_products, get_product_history, place_reorder, get_pending_reorders, mark_reorder_as_received, get_last_3_months_sales, format_number)
 from chat_with_data import run_chat_query, generate_insights
+
 
 
 
@@ -31,6 +32,7 @@ cursor = conn.cursor()
 
 # -------------------- BASIC INFORMATION PAGE --------------------
 
+
 if option == "Basic Information":
     st.header("Basic Metrics")
 
@@ -42,16 +44,16 @@ if option == "Basic Information":
     for i in range(3):
         cols[i].metric(
             label=keys[i],
-            value=basic_info[keys[i]]
+            value=format_number(basic_info[keys[i]])
         )
 
     cols = st.columns(3)
-    for i in range(3,6):
-        cols[i-3].metric(
-            label=keys[i],
-            value=basic_info[keys[i]]
-        )
 
+    for i in range(3, 6):
+        cols[i - 3].metric(
+            label=keys[i],
+            value=format_number(basic_info[keys[i]])
+        )
 
     st.divider()
 

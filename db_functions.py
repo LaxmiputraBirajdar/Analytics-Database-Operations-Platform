@@ -3,6 +3,7 @@ import numpy as np
 import psycopg2
 import os
 from dotenv import load_dotenv
+from decimal import Decimal
 
 # Load environment variables
 load_dotenv()
@@ -25,6 +26,12 @@ conn = connect_db()
 cursor = conn.cursor()
 
 
+
+
+def format_number(value):
+    if isinstance(value, (int, float, Decimal)):
+        return f"{value:,.2f}" if isinstance(value, (float, Decimal)) else f"{value:,}"
+    return value
 
 
 def get_basic_info(cursor):
