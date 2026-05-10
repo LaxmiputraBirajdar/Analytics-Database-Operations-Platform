@@ -42,41 +42,31 @@ This project helps users monitor inventory operations, manage products and reord
 # Dashboard Preview
 
 
-![alt text](image-1.png)
-
 ## Basic Metrics Dashboard
+![alt text](image-2.png)
 
-![Basic Metrics](screenshots/basic_metrics.png)
-
----
-
-## Supplier and Inventory Insights
-
-![Inventory Insights](screenshots/inventory_tables.png)
-
+![alt text](image-3.png)
 ---
 
 ## Operational Management
 
-![Operations](screenshots/operations.png)
-
+![alt text](image-4.png)
 ---
 
 ## AI Chat Interface
 
-![Chat Interface](screenshots/chat_interface.png)
+![alt text](image-5.png)
 
 ---
 
-## AI Generated SQL
+## AI Generated SQL and result
 
-![Generated SQL](screenshots/generated_sql.png)
-
+![alt text](image-6.png)
 ---
 
 ## AI-Based Inventory Insights
 
-![AI Insights](screenshots/insights.png)
+![alt text](image-7.png)
 
 ---
 
